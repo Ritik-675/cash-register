@@ -6,12 +6,32 @@ body{
 .container {
   display: flex;
   flex-direction: column;
-  /* width: 50vw; */
+  width: 50vw;
   background-color: gray;
-  /* margin: 1vh 20vw; */
+  margin: 1vh 20vw;
+}
+.portf{
+  background-color: gray;
+  padding: 0.8rem 2rem;
+}
+a{
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.portf:hover{
+  background-color: rgb(95, 94, 94);
+}
+.foot{
+  margin-top: 2rem;
+  background-color: antiquewhite;
+  text-align: center;
+  padding: 2rem;
 }
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   height: 75vh;
   margin: 5rem;

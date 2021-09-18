@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Register</title>
+    <link rel="stylesheet" href="cash.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading"><span style="background-color: antiquewhite;">Cash Register Manager</span> </h1>
+        <p class="description" style="margin: 1rem;">Enter bill and cash given by customer and know the change to return in minimum no of notes </p>
+        <label for="bill-amount">Bill Amount :</label>
+        <input id="bill-amount" type="text" style="background-color: antiquewhite;">
+        <p id="error-message" style="color: rgb(175, 9, 9); margin-left: 1rem;"></p>
+        <label for="cash-given">Cash Given</label>
+        <input id="cash-given" type="text" style="margin-bottom: 1rem; background-color: antiquewhite;">
+        <caption style="text-align: left; margin: 1rem;">Return Change</caption>
+        <table class="change-table" style="margin: 2rem;">
+        <button id="check-button" style="padding: 0.5rem; background-color: antiquewhite;">Check</button>
+            <tr>
+                <th style="background-color: antiquewhite;">No of NOtes</th>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
+            </tr>
+            <tr style="background-color: antiquewhite;">
+                <th>Note</th>
+                <td>₹2000</td>
+                <td>₹500</td>
+                <td>₹100</td>
+                <td>₹20</td>
+                <td>₹10</td>
+                <td>₹5</td>
+                <td>₹1</td>
+            </tr>
+        </table>
+    </div>
+    <script src="./cash.js"></script>
+</body>
+</html>

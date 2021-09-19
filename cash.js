@@ -3,7 +3,14 @@ const cashGiven = document.querySelector("#cash-given") ;
 const checkButton = document.querySelector("#check-button") ;
 const message = document.querySelector("#error-message") ;
 const noOfNotes = document.querySelectorAll(".no-of-notes") ;
+const proceed = document.querySelector(".p-but") ;
+const tester = document.querySelector(".container1") ; 
+const boxU2 = document.querySelector(".box2") ;
+const billAlert = document.querySelector(".opa-text") ;
+const remCash = document.querySelector(".rem-cash") ;
 const availableNotes= [2000,500,100,20,10,5,1];
+boxU2.style.display="none" ;
+tester.style.display="none" ;
 function validateBillAndCashAmount(){
     if(billAmount.value > 0)
     {
@@ -14,11 +21,11 @@ function validateBillAndCashAmount(){
             calculateChange(amountToBeReturned) ;
         }
         else{
-            showMessage("Cash Provided must be equal or greater than Bill Amount") ;
+            showMessage("** Cash Provided must be equal or greater than Bill Amount") ;
         }
     }
     else{
-        showMessage("Invalid Bill Amount") ;
+        showMessage("** Invalid Bill Amount") ;
     }
 }
 checkButton.addEventListener("click",validateBillAndCashAmount) ;
@@ -30,6 +37,27 @@ function calculateChange(amountToBeReturned){
         noOfNotes[i].innerText = numberOfNotes ;
     }
 }
+
+function expandWin(){
+    if(billAmount.value > 0)
+    {
+        boxU2.style.display="initial" ;
+        tester.style.display="none"
+    }
+    else{
+        billAlert.innerText =  "** Enter a valid Bill Amount" ;
+    }
+}
+
+proceed.addEventListener("click",expandWin) ;
+function expandTable(){
+    if(billAmount.value > 0 && cashGiven.value - billAmount.value >= 0)
+    {
+        tester.style.display="initial" ;
+        remCash.innerText = "Cash to be Returned : " +String(parseInt(cashGiven.value) - parseInt(billAmount.value)) ;
+    }
+}
+checkButton.addEventListener("click",expandTable) ;
 function hideMessage(){
     message.style.display="none" ; 
 }

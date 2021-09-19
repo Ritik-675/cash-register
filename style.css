@@ -47,7 +47,7 @@ input {
 }
 #check-button {
   max-width: 10vw;
-  margin: 3vh 15vw;
+  margin: 3vh 20vw;
 }
 .change-table {
   margin: 0;
@@ -64,4 +64,21 @@ th{
 }
 td{
   width: 10%;
+}
+.p-but{
+  width: 5vw;
+  margin: 1rem;
+  padding: 0.3rem 0.5rem; 
+  background-color: whitesmoke;
+}
+.change-note{
+  width: 5vw;
+  margin: 1rem;
+  padding: 0.3rem 0.5rem; 
+  margin-top: 0;
+  background-color: whitesmoke;
+}
+.containee{
+  display: flex !important;
+  flex-direction: column;
 }
